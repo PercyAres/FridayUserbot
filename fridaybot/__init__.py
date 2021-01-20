@@ -5,7 +5,7 @@ import sys
 import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
-
+print("9")
 import pylast
 import wget
 from nospamplus.connect import Connect
@@ -16,11 +16,11 @@ from requests import get
 from telegraph import Telegraph, exceptions, upload_file
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-
+print("10")
 from var import Var
-
+print("11")
 from .Configs import Config
-
+print("12")
 Lastupdate = time.time()
 sedprint = logging.getLogger("WARNING")
 from var import Var
@@ -32,7 +32,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-
+print("13")
 CMD_LIST = {}
 CMD_HELP = {}
 INT_PLUG = ""
@@ -40,7 +40,7 @@ LOAD_PLUG = {}
 
 ENV = os.environ.get("ENV", False)
 """ PPE initialization. """
-
+print("14")
 # Bot Logs setup:
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -164,7 +164,7 @@ if bool(ENV):
 else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
-
+print("15")
 # Global Variables
 COUNT_MSG = 0
 USERS = {}
@@ -185,6 +185,7 @@ if os.path.exists(km):
 else:
     try:
         sedlyf = wget.download(link, out=pathz)
+        print("16")
     except:
         sedprint.info("I Wasn't Able To Download Cafee Model. Skipping")
 
